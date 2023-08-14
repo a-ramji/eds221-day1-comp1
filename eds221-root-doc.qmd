@@ -1,5 +1,5 @@
 ---
-title: "eds221-1-1-not-in-analysis"
+title: "eds221 day 1 comp session 1"
 format: html
 editor: visual
 execute: 
