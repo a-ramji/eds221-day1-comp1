@@ -14,8 +14,12 @@ library(tidyverse)
 
 practicing making file paths
 
-## Read in data
+## Read in data from a file that is not downstream
+
+use ".." to hop back one level in our working directory ! :)
+
+use as many as you need! ex: "../../../../" hops back 4 levels
 
 ```{r}
-energy <- read_csv("data/us_energy.csv")
+energy2 <- read_csv("../data/us_energy.csv")
 ```
