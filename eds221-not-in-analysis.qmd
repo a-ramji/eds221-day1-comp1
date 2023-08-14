@@ -23,7 +23,9 @@ energy
 
 create a line chart of energy over time, with color based on the energy type.
 
-(we don't need to group by type if we have another grouping factor like mapping a color aesthetic = type.)
+(we don't need to group by type if we have another grouping factor like mapping a color aesthetic = type.) in the example below, we could also say color = type in the global option (ggplot()) aes.
+
+the order we put them in dictates the order that the layers show up
 
 ```{r}
 ggplot(data = energy, aes(x = year, y = quadrillion_btu
