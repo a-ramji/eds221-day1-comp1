@@ -5,3 +5,7 @@ editor: visual
 ---
 
 ## EDS 221 Day 1
+
+```{r}
+
+```
