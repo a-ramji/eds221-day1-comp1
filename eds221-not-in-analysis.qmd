@@ -1,0 +1,29 @@
+---
+title: "eds221-1-1-not-in-analysis"
+format: html
+editor: visual
+---
+
+## 
+
+## EDS 221 Day 1
+
+```{r}
+library(tidyverse)
+```
+
+practicing making file paths
+
+## Read in data
+
+```{r}
+energy <- read_csv("data/us_energy.csv")
+energy
+```
+
+create a line chart of energy over time, with color based on the energy type.
+
+```{r}
+ggplot(data = energy, aes(x = year, y = quadrillion_btu, group = type)) +
+  geom_line(aes(color = type))
+```

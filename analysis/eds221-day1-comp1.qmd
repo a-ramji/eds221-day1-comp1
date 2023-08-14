@@ -11,3 +11,11 @@ execute:
 ```{r}
 library(tidyverse)
 ```
+
+practicing making file paths
+
+## Read in data
+
+```{r}
+energy <- read_csv("data/us_energy.csv")
+```
