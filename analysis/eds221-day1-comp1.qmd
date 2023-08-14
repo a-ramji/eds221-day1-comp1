@@ -2,10 +2,12 @@
 title: "EDS221_day1_comp1"
 format: html
 editor: visual
+execute: 
+  warning: FALSE
 ---
 
 ## EDS 221 Day 1
 
 ```{r}
-
+library(tidyverse)
 ```
