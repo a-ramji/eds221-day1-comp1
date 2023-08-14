@@ -23,7 +23,22 @@ energy
 
 create a line chart of energy over time, with color based on the energy type.
 
+(we don't need to group by type if we have another grouping factor like mapping a color aesthetic = type.)
+
 ```{r}
-ggplot(data = energy, aes(x = year, y = quadrillion_btu, group = type)) +
-  geom_line(aes(color = type))
+ggplot(data = energy, aes(x = year, y = quadrillion_btu
+                        #  , group = type
+                          )) +
+  geom_line(aes(color = type)) +
+  geom_point(aes(color = type)) +
+  theme_minimal()
+```
+
+where we place the data, aes(x = variable, y = variable) matters. if we want to have different layers referring to SAME variables, put in ggplot(). if different layers have diff variables, put in each layer (geom_point(), geom_line(), etc.)
+
+```{r}
+ggplot() +
+  geom_point(data = energy, aes(x = year, y = quadrillion_btu, color = type)) +
+  geom_line(data = energy, aes(x = year, y = quadrillion_btu, color = type)) + 
+  theme_minimal()
 ```
